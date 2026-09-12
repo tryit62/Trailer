@@ -1,0 +1,28 @@
+OCI // TRANSMISSION D000 — GITHUB PAGES
+
+CONTENU
+- index.html
+- style.css
+- app.js
+- transmission.mp4 (V5 MASTER validée)
+
+MISE EN LIGNE RAPIDE
+1. Créer un nouveau dépôt GitHub, par exemple : oci-transmission
+2. Ajouter les 4 fichiers À LA RACINE du dépôt (pas de sous-dossier).
+3. Dans GitHub : Settings > Pages.
+4. Sous "Build and deployment", choisir "Deploy from a branch".
+5. Branch : main ; dossier : / (root), puis Save.
+6. Attendre la publication et ouvrir l'adresse GitHub Pages indiquée par GitHub.
+
+EXPÉRIENCE
+Page d'entrée -> CONSULTER LA TRANSMISSION -> V5 MASTER -> écran final :
+TRANSMISSION TERMINÉE
+AUCUNE ACTION N'EST REQUISE.
+DOSSIER // MAINTENU OUVERT
+
+IMPORTANT
+Ne pas annoncer la date de remise de la boîte D000.
+Le matricule affiché reste volontairement masqué : OCI-26-•••••.
+Le vrai matricule sera révélé physiquement dans D000.
+
+Version : PROLOGUE D000 // V1

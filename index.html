@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#030404">
+  <title>OCI // Transmission</title>
+  <link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <main id="gate" class="screen">
+    <section class="terminal">
+      <div class="brand">ORDRE // CANAL DE TRANSMISSION</div>
+      <div class="rule"></div>
+
+      <div class="meta">
+        <span>DESTINATAIRE</span><strong>CONFIRMÉ</strong>
+        <span>DOSSIER</span><strong>OUVERT</strong>
+        <span>IDENTIFIANT</span><strong>OCI-26-•••••</strong>
+        <span>TRANSMISSION</span><strong>EN ATTENTE</strong>
+      </div>
+
+      <div class="status" id="status">AUTHENTIFICATION DU CANAL<span class="cursor">_</span></div>
+
+      <button id="open" class="action" type="button">CONSULTER LA TRANSMISSION</button>
+      <div class="minor">AUCUNE AUTRE ACTION N'EST REQUISE.</div>
+    </section>
+  </main>
+
+  <section id="playerScreen" class="player-screen" hidden>
+    <video id="video" playsinline preload="auto" controlslist="nodownload noplaybackrate" disablepictureinpicture>
+      <source src="transmission.mp4" type="video/mp4">
+    </video>
+  </section>
+
+  <main id="end" class="screen" hidden>
+    <section class="terminal end-terminal">
+      <div class="brand">ORDRE // CANAL DE TRANSMISSION</div>
+      <div class="rule"></div>
+      <div class="end-title">TRANSMISSION TERMINÉE</div>
+      <div class="end-sub">AUCUNE ACTION N'EST REQUISE.</div>
+      <div class="end-code">DOSSIER // MAINTENU OUVERT</div>
+    </section>
+  </main>
+
+  <script src="app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+:root{
+  --bg:#030404;--panel:#070909;--fg:#e9e9e3;--muted:#888d89;
+  --line:#303532;--line2:#59605b;--dim:#111412;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--fg)}
+body{
+  min-height:100dvh;font-family:"Courier New",ui-monospace,monospace;
+  background:radial-gradient(circle at 72% 24%,#0b0e0c 0,#040505 48%,#020303 100%);
+  overflow:hidden;
+}
+.scanlines{
+  pointer-events:none;position:fixed;inset:0;z-index:20;opacity:.15;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,rgba(255,255,255,.025) 4px);
+}
+.screen{min-height:100dvh;display:grid;place-items:center;padding:28px}
+.terminal{width:min(760px,100%);padding:34px 30px;border-top:1px solid var(--line2);border-bottom:1px solid var(--line)}
+.brand{font-size:11px;letter-spacing:.25em;color:var(--muted);text-transform:uppercase}
+.rule{height:1px;background:var(--line);margin:18px 0 28px}
+.meta{display:grid;grid-template-columns:minmax(125px,.8fr) 1.2fr;gap:11px 22px;font-size:12px;line-height:1.45}
+.meta span{color:var(--muted);letter-spacing:.08em}
+.meta strong{font-weight:400;letter-spacing:.10em}
+.status{margin:42px 0 20px;font-size:13px;letter-spacing:.08em;color:var(--muted);min-height:20px}
+.cursor{animation:blink .9s steps(1) infinite}
+.action{
+  appearance:none;border:1px solid var(--line2);border-radius:0;background:#050706;color:var(--fg);
+  padding:14px 17px;font:12px "Courier New",monospace;letter-spacing:.12em;cursor:pointer;
+}
+.action:hover,.action:focus{background:#0d100e;outline:1px solid var(--fg);outline-offset:3px}
+.minor{margin-top:18px;color:#666c68;font-size:10px;letter-spacing:.10em}
+.player-screen{position:fixed;inset:0;z-index:10;background:#000;align-items:center;justify-content:center}
+.player-screen:not([hidden]){display:flex}
+video{width:100vw;height:100dvh;object-fit:contain;background:#000}
+.end-terminal{text-align:center}
+.end-title{margin-top:72px;font-size:clamp(18px,4vw,30px);letter-spacing:.14em}
+.end-sub{margin-top:24px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
+.end-code{margin-top:70px;font-size:10px;letter-spacing:.14em;color:#555b57}
+[hidden]{display:none!important}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+@media(max-width:560px){
+  .screen{padding:20px}.terminal{padding:25px 5px}.meta{grid-template-columns:1fr;gap:5px}
+  .meta strong{margin-bottom:10px}.status{margin-top:30px}.action{width:100%}
+}
+@media(prefers-reduced-motion:reduce){.cursor{animation:none}}
